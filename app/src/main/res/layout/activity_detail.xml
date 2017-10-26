@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/root_view"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar_details"
+      android:layout_width="match_parent"
+      android:layout_height="?actionBarSize"
+      app:popupTheme="@style/PopupTheme"
+      app:theme="@style/ToolbarTheme" />
+  </android.support.design.widget.AppBarLayout>
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v7.widget.AppCompatImageView
+      android:id="@+id/image_large"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:transitionName="@string/transition_image_view"
+      tools:src="@drawable/error_gradient" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+      android:id="@+id/image_large_fresco"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:transitionName="@string/transition_image_view"
+      app:failureImage="@drawable/error_gradient"
+      app:placeholderImage="@drawable/placeholder_gradient"
+      tools:src="@drawable/error_gradient" />
+
+  </FrameLayout>
+
+
+  <FrameLayout
+    android:id="@+id/bottom_sheet_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="66dp"
+    app:behavior_skipCollapsed="false"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="6dp"
+      android:layout_gravity="top"
+      android:background="@drawable/bottom_sheet_shadow" />
+
+    <com.kdotj.demo.imageloadingdemo.ui.details.LibraryTextView
+      android:id="@+id/library_text_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="6dp"
+      android:background="#FFFFFF" />
+
+  </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>
