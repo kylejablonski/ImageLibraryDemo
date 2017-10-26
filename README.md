@@ -1,4 +1,4 @@
-# ImageLibraryDemo
+# ImageLoading Demo
 Ever try the popular image libraries? Picasso, Glide, Fresco &amp; Ion in one app. 
 
 This app shows you at a quick glance what the popular image libraries are in Android.
